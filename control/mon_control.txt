@@ -103,7 +103,7 @@ Thief Bug Egg 1 0 0
 
 ##### Plants #####
 Black Mushroom 0 0 0
-Blue Plant 0 0 0
+Blue Plant 1 0 0
 Green Plant 0 0 0
 Red Mushroom 0 0 0
 Red Plant 1 0 0

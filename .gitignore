@@ -20,6 +20,10 @@ control/*
 !control/sys.txt
 !control/timeouts.txt
 
+!logs/
+logs/*
+!logs/log_anlys.ipynb
+
 !pictures/
 
 !plugins/
