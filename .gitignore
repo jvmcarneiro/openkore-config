@@ -28,6 +28,13 @@ plugins/*
 !plugins/busParty/
 !plugins/wait4party/
 
+!tables/
+tables/*
+!tables/kRO/
+tables/kRO/*
+!tables/kRO/Ragexe_2021_11_03/
+!tables/servers.txt
+
 !wxstart_crus.lnk
 !wxstart_dance.lnk
 !wxstart_monk.lnk
