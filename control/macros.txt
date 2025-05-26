@@ -1,0 +1,353 @@
+######## Unstuck at Death ########
+
+automacro DeadUnstuck {
+	exclusive 1
+	console /You have died/
+	delay 10
+	call {
+		do warp cancel
+	}
+}
+
+
+######## Sit Timeout ########
+
+automacro SitDetect {
+	disabled 1
+	run-once 1
+	console /You are sitting/
+	macro_delay 45
+	call {
+		log Sitting 45 sec timer initiated
+		do stand
+	}
+}
+
+automacro StandDetect {
+	disabled 1
+	exclusive 1
+	console /You are standing/
+	call {
+		release SitDetect
+		pause 1
+		do eval AI::clear()
+	}
+}
+
+
+######## Map Swap ########
+
+macro Comodo {
+	if (@config(saveMap) != comodo) {
+		$attackAuto = @config(attackAuto)
+		$randomWalk = @config(route_randomWalk)
+		do conf lockMap none
+		do conf attackAuto 1
+		do conf route_randomWalk 0
+		do move 195 150 comodo
+		do talknpc 195 150 c r0 n
+		do conf saveMap comodo
+		do conf attackAuto $attackAuto
+		do conf route_randomWalk $randomWalk
+		$attackAuto = undef
+		$randomWalk = undef
+	}
+	do conf storageAuto_npc comodo 195 150
+	do conf sellAuto_npc cmd_in01 79 182
+	do conf BuyRedPot.npc cmd_in01 79 182
+	do conf BuyButtWing.npc cmd_in01 79 182
+	do conf BuyFlyWing.npc cmd_in01 79 182
+	do conf BuyConcPot.npc cmd_in01 79 182
+	do conf lockMap beach_dun3
+	stop
+}
+
+macro Izlude {
+	if (@config(saveMap) != izlude) {
+		$attackAuto = @config(attackAuto)
+		$randomWalk = @config(route_randomWalk)
+		do conf lockMap none
+		do conf attackAuto 1
+		do conf route_randomWalk 0
+		do move 134 87 izlude
+		do talknpc 134 87 c r0 n
+		do conf saveMap izlude
+		do conf attackAuto $attackAuto
+		do conf route_randomWalk $randomWalk
+		$attackAuto = undef
+		$randomWalk = undef
+	}
+	do conf storageAuto_npc izlude 134 87
+	do conf sellAuto_npc izlude_in 115 61
+	do conf BuyRedPot.npc izlude_in 115 61
+	do conf BuyButtWing.npc izlude_in 115 61
+	do conf BuyFlyWing.npc izlude_in 115 61
+	do conf BuyConcPot.npc izlude_in 115 61
+	do conf lockMap iz_dun01
+	stop
+}
+
+macro Geffen {
+	if (@config(saveMap) != geffen) {
+		$attackAuto = @config(attackAuto)
+		$randomWalk = @config(route_randomWalk)
+		do conf lockMap none
+		do conf attackAuto 1
+		do conf route_randomWalk 0
+		do move 120 62 geffen
+		do talknpc 120 62 c r0 n
+		do conf saveMap geffen
+		do conf attackAuto $attackAuto
+		do conf route_randomWalk $randomWalk
+		$attackAuto = undef
+		$randomWalk = undef
+	}
+	do conf storageAuto_npc geffen 120 62
+	do conf sellAuto_npc geffen_in 77 167
+	do conf BuyRedPot.npc geffen_in 77 167
+	do conf BuyButtWing.npc geffen_in 77 167
+	do conf BuyFlyWing.npc geffen_in 77 167
+	do conf BuyConcPot.npc geffen_in 77 167
+	do conf lockMap gef_fild04
+	stop
+}
+
+macro Morroc {
+	if (@config(saveMap) != morocc) {
+		$attackAuto = @config(attackAuto)
+		$randomWalk = @config(route_randomWalk)
+		do conf lockMap none
+		do conf attackAuto 1
+		do conf route_randomWalk 0
+		do move 156 97 morocc
+		do talknpc 156 97 c r0 n
+		do conf saveMap morocc
+		do conf attackAuto $attackAuto
+		do conf route_randomWalk $randomWalk
+		$attackAuto = undef
+		$randomWalk = undef
+	}
+	do conf storageAuto_npc moc_ruins 59 157
+	do conf sellAuto_npc moc_ruins 91 128
+	do conf BuyRedPot.npc moc_ruins 91 128
+	do conf BuyButtWing.npc moc_ruins 91 128
+	do conf BuyFlyWing.npc moc_ruins 91 128
+	do conf BuyConcPot.npc moc_ruins 91 128
+	do conf lockMap anthell01
+	stop
+}
+
+macro Payon {
+	if (@config(saveMap) != payon) {
+		$attackAuto = @config(attackAuto)
+		$randomWalk = @config(route_randomWalk)
+		do conf lockMap none
+		do conf attackAuto 1
+		do conf route_randomWalk 0
+		do move 181 104 payon
+		do talknpc 181 104 c r0 n
+		do conf saveMap payon
+		do conf attackAuto $attackAuto
+		do conf route_randomWalk $randomWalk
+		$attackAuto = undef
+		$randomWalk = undef
+	}
+	do conf storageAuto_npc payon 181 104
+	do conf sellAuto_npc payon 159 96
+	do conf BuyRedPot.npc payon 159 96
+	do conf BuyButtWing.npc payon 159 96
+	do conf BuyFlyWing.npc payon 159 96
+	do conf BuyConcPot.npc payon 159 96
+	do conf lockMap pay_fild09
+	stop
+}
+
+macro Prontera {
+	if (@config(saveMap) != prontera) {
+		$attackAuto = @config(attackAuto)
+		$randomWalk = @config(route_randomWalk)
+		do conf lockMap none
+		do conf attackAuto 1
+		do conf route_randomWalk 0
+		do move 29 207 prontera
+		do talknpc 29 207 c r0 n
+		do conf saveMap prontera
+		do conf attackAuto $attackAuto
+		do conf route_randomWalk $randomWalk
+		$attackAuto = undef
+		$randomWalk = undef
+	}
+	do conf storageAuto_npc prontera 29 207
+	do conf sellAuto_npc prt_in 126 76
+	do conf BuyRedPot.npc prt_in 126 76
+	do conf BuyButtWing.npc prt_in 126 76
+	do conf BuyFlyWing.npc prt_in 126 76
+	do conf BuyConcPot.npc prt_in 126 76
+	do conf lockMap prt_sewb1
+	stop
+}
+
+
+######## Clear Stuck ########
+
+automacro ClearStuck {
+	exclusive 1
+	console /Stuck /
+	call { 
+		$follower = 0
+		$dir = @rand (1,4)
+		if (@config(follow) == 1) {
+			$follower = 1
+		}
+		do warp cancel
+		if ($dir == 1) do north
+		if ($dir == 2) do south 
+		if ($dir == 3) do east 
+		if ($dir == 4) do west
+		if ($follower == 1) {
+			do conf follow 1
+		}
+		$follower = undef
+	}
+	timeout 1
+}
+
+automacro NPCRelog {
+	exclusive 1
+	console /Failed to teleport using NPC/
+	call {
+		do relog
+	}
+}
+
+
+######## Teleport Mode Toggle ########
+
+automacro TeleOn {
+	disabled 1
+	run-once 1
+	inventory "Fly Wing" >= 20
+	call {
+		do conf route_randomWalk 0
+		do conf teleportAuto_idle 1
+		do conf route_teleport 1
+		release TeleOff
+	}
+	timeout 5
+	
+}
+
+automacro TeleOff {
+	disabled 1
+	run-once 1
+	inventory "Fly Wing" <= 5
+	aggressives == 0
+	call {
+		do conf route_randomWalk 1
+		do conf teleportAuto_idle 0
+		do conf route_teleport 0
+		release TeleOn
+	}
+	timeout 5
+}
+
+
+######## Auto Refinement ########
+
+macro refinement_safe {
+	do talknpc 63 60 c r3 c r0 n
+}
+
+macro refinement_unsafe {
+	do talknpc 63 60 c r3 c r0 c c r0 n
+}
+
+automacro refine_start0 {
+	priority 1
+	inventory Phracon >= 1
+	equipped rightHand Main Gauche [4]
+	run-once 1
+	call refinement_safe
+}
+
+automacro refine_start1 {
+	priority 1
+	inventory Phracon >= 1
+	equipped rightHand +1 Main Gauche [4]
+	run-once 1
+	call refinement_safe
+}
+
+automacro refine_start2 {
+	priority 1
+	inventory Phracon >= 1
+	equipped rightHand +2 Main Gauche [4]
+	run-once 1
+	call refinement_safe
+}
+
+automacro refine_start3 {
+	priority 1
+	inventory Phracon >= 1
+	equipped rightHand +3 Main Gauche [4]
+	run-once 1
+	call refinement_safe
+}
+
+automacro refine_start4 {
+	priority 1
+	inventory Phracon >= 1
+	equipped rightHand +4 Main Gauche [4]
+	run-once 1
+	call refinement_safe
+}
+
+automacro refine_start5 {
+	priority 1
+	inventory Phracon >= 1
+	equipped rightHand +5 Main Gauche [4]
+	run-once 1
+	call refinement_safe
+}
+
+automacro refine_start6 {
+	priority 1
+	inventory Phracon >= 1
+	equipped rightHand +6 Main Gauche [4]
+	run-once 1
+	call refinement_safe
+}
+
+automacro refine_start7 {
+	priority 1
+	inventory Phracon >= 1
+	equipped rightHand +7 Main Gauche [4]
+	run-once 1
+	call refinement_unsafe
+}
+
+automacro refine_start8 {
+	priority 1
+	inventory Phracon >= 1
+	equipped rightHand +8 Main Gauche [4]
+	run-once 1
+	call refinement_unsafe
+}
+
+automacro refine_start9 {
+	priority 1
+	inventory Phracon >= 1
+	equipped rightHand +9 Main Gauche [4]
+	run-once 1
+	call refinement_unsafe
+}
+
+automacro fail {
+	console /You failed to refine a weapon!/
+	equipped rightHand none
+	inventory "Main Gauche [4]" >= 1
+	call {
+		do eq Main Gauche [4]
+		release all
+	}
+}

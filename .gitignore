@@ -1,0 +1,35 @@
+# Everyting
+/*
+
+# Except
+!.gitignore
+!README.md
+
+!control/
+control/*
+!control/crus/
+!control/dance/
+!control/monk/
+!control/priest/
+!control/sage/
+!control/arrowcraft.txt
+!control/config.txt
+!control/items_control.txt
+!control/macros.txt
+!control/mon_control.txt
+!control/sys.txt
+!control/timeouts.txt
+
+!pictures/
+
+!plugins/
+plugins/*
+!plugins/busFollow/
+!plugins/busParty/
+!plugins/wait4party/
+
+!wxstart_crus.lnk
+!wxstart_dance.lnk
+!wxstart_monk.lnk
+!wxstart_priest.lnk
+!wxstart_sage.lnk

@@ -1,0 +1,810 @@
+# Please Read the Users Manual
+# The Manual is located at https://openkore.com/wiki/Manual
+
+######## Login options and server-specific options ########
+
+master Localhost
+server 0
+username priest
+password 123123
+loginPinCode
+char 0
+
+# Poseidon Settings: https://openkore.com/wiki/Poseidon
+# They must be the same as Query Server config in Poseidon.txt
+poseidonServer 127.0.0.1
+poseidonPort 24390
+
+bindIp
+forceMapIP
+
+# 1 = hook into RO client, 2 = Act as stand-alone proxy, proxy = act as true proxy
+# https://openkore.com/wiki/XKore
+XKore 0
+XKore_port 2350
+XKore_dll NetRedirect.dll
+XKore_injectDLL 1
+XKore_autoAttachIfOneExe 1
+XKore_silent 0
+XKore_bypassBotDetection 0
+XKore_exeName client.exe
+
+# XKore 2 / Proxy configuration
+XKore_listenIp 127.0.0.1
+XKore_listenPort 6901
+XKore_publicIp 127.0.0.1
+XKore_ID
+
+# It is not advised to set secureAdminPassword if you're using Xkore 2
+secureAdminPassword 0
+adminPassword 123123
+callSign
+commandPrefix ;
+callSignGM 0
+inGameAuth 0
+
+macAddress
+
+pauseCharLogin 2
+pauseCharServer 0
+pauseMapServer 0
+ignoreInvalidLogin 1
+
+# Opening cash shop when connected to map server (recv/ST0)
+whenInGame_requestCashPoints 0
+
+message_length_max 80
+
+######## Main configuration ########
+
+alias_heal sp 28
+
+allowedMaps
+allowedMaps_reaction 1
+
+attackAuto 2
+attackAuto_party 2
+attackAuto_onlyWhenSafe 0
+attackAuto_followTarget 1
+attackAuto_inLockOnly 0
+attackAuto_notInTown 1
+attackAuto_notWhile_storageAuto 1
+attackAuto_notWhile_buyAuto 1
+attackAuto_notWhile_sellAuto 1
+attackAuto_considerDamagedAggressive 0
+attackDistance 1
+attackDistanceAuto 1
+attackMaxDistance 1
+attackMaxRouteTime 1
+attackMinPlayerDistance 2
+attackMinPortalDistance 4
+attackUseWeapon 0
+attackNoGiveup 0
+attackCanSnipe 0
+attackCheckLOS 1
+attackRouteMaxPathDistance 17
+attackLooters 1
+attackLooters_dist 1
+attackChangeTarget 1
+aggressiveAntiKS 0
+
+attackUpdateMonsterPos 1
+
+# the following attack keys are meant to work only in private server (rAthena/Hercules)
+# if you enable this in a official server you character will act weird, because character can't attack beyond the range
+attackBeyondMaxDistance_waitForAgressive 0
+attackBeyondMaxDistance_sendAttackWhileWaiting 0
+attackSendAttackWithMove 0
+attackWaitApproachFinish 1
+
+autoMoveOnDeath 0
+autoMoveOnDeath_x
+autoMoveOnDeath_y
+autoMoveOnDeath_map
+
+attackEquip_topHead
+attackEquip_midHead
+attackEquip_lowHead
+attackEquip_leftHand
+attackEquip_rightHand
+attackEquip_leftAccessory
+attackEquip_rightAccessory
+attackEquip_robe
+attackEquip_armor
+attackEquip_shoes
+attackEquip_arrow
+
+# You need the breakTime plugin: https://openkore.com/wiki/BreakTime
+autoBreakTime {
+	startTime
+	stopTime
+}
+
+autoConfChange {
+	minTime
+	varTime
+	lvl
+	joblvl
+}
+
+autoMakeArrows 0
+
+autoRestart 0
+
+autoRestartMin 10800
+autoRestartSeed 3600
+
+autoRestartSleep 1
+autoSleepMin 900
+autoSleepSeed 900
+
+autoResponse 0
+autoResponseOnHeal 0
+
+autoSpell
+autoSpell_safe
+autoPoison
+
+avoidGM_namePattern
+avoidGM_near 0
+avoidGM_near_inTown 0
+avoidGM_talk 0
+avoidGM_reconnect 1800
+avoidGM_ignoreList
+
+avoidList 0
+avoidList_inLockOnly 0
+avoidList_reconnect 1800
+avoidList_ignoreList
+
+avoidHiddenActors 0
+avoidHiddenMonsters 0
+
+cachePlayerNames 0
+cachePlayerNames_duration 900
+cachePlayerNames_maxSize 100
+
+clientSight 17
+
+dcPause 1
+dcOnDeath 0
+dcOnDualLogin 0
+dcOnDisconnect 0
+dcOnEmptyArrow 0
+dcOnMaxReconnections 0
+dcOnMute 0
+dcOnPM 0
+dcOnZeny 0
+dcOnStorageFull 0
+dcOnPlayer 0
+dcOnServerShutDown 0
+dcOnServerClose 0
+dcOnJobLevel
+dcOnLevel
+
+follow 0
+followTarget Monique
+followEmotion 0
+followEmotion_distance 4
+followFaceDirection 0
+followDistanceMax 7
+followDistanceMin 4
+followLostStep 20
+followSitAuto 0
+followBot 0
+
+wait4party 0
+wait4party_sameMapOnly 0
+wait4party_waitBySitting 1
+wait4party_attackOnSearch 0
+wait4party_followSit 0
+wait4party_ignore Roger
+wait4party_timeout 1
+
+itemsTakeAuto 2
+itemsTakeAuto_party 0
+itemsGatherAuto 1
+itemsGatherAuto_notInTown 0
+itemsGatherAutoMinPlayerDistance 6
+itemsGatherAutoMinPortalDistance 5
+itemsMaxWeight 89
+itemsMaxWeight_sellOrStore 48
+itemsMaxNum_sellOrStore 99
+cartMaxWeight 7900
+itemsTakeGreed 0
+itemsCheckWeight 1
+
+lockMap gef_fild04
+
+# Ant Hell egg farm
+#lockMap_x 27
+#lockMap_y 270
+#lockMap_randX 106
+#lockMap_randY 119
+
+route_escape_reachedNoPortal 1
+route_escape_randomWalk 1
+route_escape_shout
+route_avoidWalls 1
+route_randomWalk 0
+route_randomWalk_inTown 0
+route_randomWalk_maxRouteTime 75
+route_maxWarpFee
+route_maxNpcTries 1
+route_teleport 0
+route_teleport_minDistance 100
+route_teleport_maxTries 20
+route_teleport_notInMaps
+route_step 17
+route_removeMissingPortals_NPC 1
+route_removeMissingPortals 0
+route_tryToGuessMissingPortalByDistance 1
+route_reAddMissingPortals 1
+route_randomFactor 0
+
+runFromTarget 1
+runFromTarget_inAdvance 1
+runFromTarget_dist 6
+runFromTarget_minStep 10
+runFromTarget_maxPathDistance 13
+runFromTarget_noAttackMethodFallback 1
+runFromTarget_noAttackMethodFallback_attackMaxDist 14
+runFromTarget_noAttackMethodFallback_minStep 10
+
+saveMap geffen
+saveMap_warpToBuyOrSell 1
+saveMap_warpChatCommand
+memo1
+memo2
+memo3
+memo4
+
+shopAuto_open 0
+shop_random 0
+shop_useSkill 1
+
+buyerShopAuto_open 0
+buyerShop_random 0
+
+sitAuto_hp_lower 40
+sitAuto_hp_upper 50
+sitAuto_sp_lower 40
+sitAuto_sp_upper 90
+sitAuto_follow 0
+sitAuto_over_50 0
+sitAuto_idle 0
+sitAuto_look
+sitAuto_look_from_wall
+sitTensionRelax 0
+
+statsAddAuto 1
+statsAddAuto_list 10 str, 94 int, 20 vit, 39 dex, 94 vit
+statsAddAuto_dontUseBonus 1
+statsAdd_over_99 1
+
+skillsAddAuto 1
+skillsAddAuto_list AL_HEAL 10, AL_DP 5, AL_BLESSING 10, AL_RUWACH 1, AL_TELEPORT 2, AL_WARP 4, AL_PNEUMA 1, AL_INCAGI 10, AL_ANGELUS 4, AL_CURE 1, AL_HOLYWATER 1
+
+tankMode 0
+tankModeTarget
+
+teleportAuto_hp 10
+teleportAuto_sp 0
+teleportAuto_idle 1
+teleportAuto_portal 0
+teleportAuto_search 0
+teleportAuto_minAggressives 0
+teleportAuto_minAggressivesInLock 0
+teleportAuto_onlyWhenSafe 0
+teleportAuto_maxDmg 500
+teleportAuto_maxDmgInLock 0
+teleportAuto_deadly 1
+teleportAuto_useSkill 0
+teleportAuto_useChatCommand
+teleportAuto_allPlayers 0
+teleportAuto_notPlayers
+teleportAuto_atkCount 0
+teleportAuto_atkMiss 10
+teleportAuto_unstuck 0
+teleportAuto_lostTarget 0
+teleportAuto_dropTarget 0
+teleportAuto_dropTargetKS 0
+teleportAuto_dropTargetHidden 0
+teleportAuto_attackedWhenSitting 0
+teleportAuto_totalDmg 0
+teleportAuto_totalDmgInLock 0
+teleportAuto_equip_leftAccessory
+teleportAuto_equip_rightAccessory
+teleportAuto_lostHomunculus
+teleportAuto_useItemForRespawn
+teleportAuto_item1
+teleportAuto_item2
+
+dealAuto 2
+dealAuto_names
+partyAuto 2
+partyAutoShare 0
+partyAutoShareItem 0
+partyAutoShareItemDiv 0
+guildAutoDeny 1
+attendanceAuto 1
+
+verbose 1
+showDomain 0
+showDomain_NPC parseMsg_presence
+showDomain_Shop list
+squelchDomains
+verboseDomains
+beepDomains
+beepDomains_notInTown
+friendlyAID
+showTime
+showTimeDomains
+showTimeDomainsFormat
+wx_map_maxAutoSize 300
+wx_map_monsterSticking 1
+wx_map_npcSticking 1
+wx_map_playersSticking 1
+wx_map_portalSticking 5
+wx_map_route 1
+wx_npcTalk
+wx_captcha
+showAllDamage 0
+manualURL https://openkore.com/wiki/Manual
+forumURL https://forums.openkore.com
+
+logChat 1
+logPrivateChat 1
+logPartyChat 1
+logGuildChat 1
+logSystemChat 1
+logLocalBroadcast 1
+logShop 1
+logEmoticons
+logConsole 0
+logAppendUsername 1
+logAppendServer 0
+monsterLog 1
+playerLog 0
+logDead 1
+
+questDisplayStyle 1
+
+chatTitleOversize 0
+shopTitleOversize 0
+buyerShopTitleOversize 0
+
+sleepTime 50000
+
+ignoreAll 0
+itemHistory 1
+autoTalkCont 0
+noAutoSkill 0
+portalCompile 1
+portalRecord 2
+portalRecord_recompileAfter 1
+missDamage 0
+
+tankersList
+
+repairAuto 0
+repairAuto_list
+
+status_mapProperty 0
+status_mapType 0
+
+monster_filter
+
+######## Mercenary Support ########
+
+mercenary_attackAuto 2
+mercenary_attackAuto_party 1
+mercenary_attackAuto_notInTown 1
+mercenary_attackAuto_inLockOnly 1
+mercenary_attackAuto_notWhile_storageAuto 1
+mercenary_attackAuto_notWhile_buyAuto 1
+mercenary_attackAuto_notWhile_sellAuto 1
+mercenary_attackAuto_considerDamagedAggressive 0
+mercenary_attackAuto_onlyWhenSafe 0
+mercenary_attackAuto_duringRandomWalk 0
+mercenary_attackAuto_duringItemsTake 0
+mercenary_attackDistance 1
+mercenary_attackMaxDistance 1
+mercenary_attackDistanceAuto 1
+mercenary_attackMaxRouteTime 8
+mercenary_attackCanSnipe 0
+mercenary_attackCheckLOS 1
+mercenary_attackRouteMaxPathDistance 20
+mercenary_attackUseWeapon 1
+mercenary_attackNoGiveup 0
+mercenary_attackChangeTarget 1
+mercenary_attack_dance_melee 0
+mercenary_attack_dance_ranged 0
+
+mercenary_attackBeyondMaxDistance_waitForAgressive 0
+mercenary_attackBeyondMaxDistance_sendAttackWhileWaiting 0
+mercenary_attackSendAttackWithMove 0
+mercenary_attackWaitApproachFinish 1
+
+mercenary_lost_teleportToMaster_maxTries 6
+
+mercenary_route_randomWalk_rescueWhenLost 0
+mercenary_route_randomWalk_stopDuringAttack 0
+mercenary_route_randomWalk_waitMinDistance 0
+
+mercenary_runFromTarget 0
+mercenary_runFromTarget_inAdvance 0
+mercenary_runFromTarget_dist 5
+mercenary_runFromTarget_minStep 7
+mercenary_runFromTarget_maxPathDistance 20
+mercenary_runFromTarget_noAttackMethodFallback 0
+mercenary_runFromTarget_noAttackMethodFallback_attackMaxDist 14
+mercenary_runFromTarget_noAttackMethodFallback_minStep 8
+
+mercenary_idleWalkType 1
+mercenary_followDistanceMin 3
+mercenary_followDistanceMax 12
+
+mercenary_moveNearWhenIdle 1
+mercenary_moveNearWhenIdle_minDistance 3
+mercenary_moveNearWhenIdle_maxDistance 8
+
+mercenary_route_step 10
+
+mercenary_tankMode 0
+mercenary_tankModeTarget
+
+mercenary_teleportAuto_hp 10
+mercenary_teleportAuto_maxDmg 500
+mercenary_teleportAuto_maxDmgInLock 0
+mercenary_teleportAuto_deadly 1
+mercenary_teleportAuto_unstuck 0
+mercenary_teleportAuto_dropTarget 0
+mercenary_teleportAuto_dropTargetKS 0
+mercenary_teleportAuto_totalDmg 0
+mercenary_teleportAuto_totalDmgInLock 0
+mercenary_teleportAuto_attackedWhenSitting 0
+
+######## Homunculus Support ########
+
+homunculus_attackAuto 2
+homunculus_attackAuto_party 1
+homunculus_attackAuto_notInTown 1
+homunculus_attackAuto_inLockOnly 1
+homunculus_attackAuto_notWhile_storageAuto 1
+homunculus_attackAuto_notWhile_buyAuto 1
+homunculus_attackAuto_notWhile_sellAuto 1
+homunculus_attackAuto_considerDamagedAggressive 0
+homunculus_attackAuto_onlyWhenSafe 0
+homunculus_attackAuto_duringRandomWalk 0
+homunculus_attackAuto_duringItemsTake 0
+homunculus_attackDistance 1
+homunculus_attackMaxDistance 1
+homunculus_attackDistanceAuto 1
+homunculus_attackMaxRouteTime 4
+homunculus_attackCanSnipe 0
+homunculus_attackCheckLOS 1
+homunculus_attackRouteMaxPathDistance 20
+homunculus_attackUseWeapon 1
+homunculus_attackNoGiveup 0
+homunculus_attackChangeTarget 1
+homunculus_attack_dance_melee 0
+
+homunculus_attackBeyondMaxDistance_waitForAgressive 0
+homunculus_attackBeyondMaxDistance_sendAttackWhileWaiting 0
+homunculus_attackSendAttackWithMove 0
+homunculus_attackWaitApproachFinish 1
+
+homunculus_lost_teleportToMaster_maxTries 6
+
+homunculus_route_randomWalk_rescueWhenLost 0
+homunculus_route_randomWalk_stopDuringAttack 0
+homunculus_route_randomWalk_waitMinDistance 0
+
+homunculus_runFromTarget 0
+homunculus_runFromTarget_dist 5
+homunculus_runFromTarget_minStep 7
+homunculus_runFromTarget_maxPathDistance 20
+homunculus_runFromTarget_noAttackMethodFallback 0
+homunculus_runFromTarget_noAttackMethodFallback_attackMaxDist 14
+homunculus_runFromTarget_noAttackMethodFallback_minStep 8
+
+homunculus_idleWalkType 1
+homunculus_followDistanceMin 3
+homunculus_followDistanceMax 12
+
+homunculus_moveNearWhenIdle 1
+homunculus_moveNearWhenIdle_minDistance 3
+homunculus_moveNearWhenIdle_maxDistance 8
+
+homunculus_route_step 10
+
+homunculus_tankMode 0
+homunculus_tankModeTarget
+
+homunculus_StandByAuto 0
+homunculus_teleportAuto_hp 10
+homunculus_teleportAuto_maxDmg 500
+homunculus_teleportAuto_maxDmgInLock 0
+homunculus_teleportAuto_deadly 1
+homunculus_teleportAuto_unstuck 0
+homunculus_teleportAuto_dropTarget 0
+homunculus_teleportAuto_dropTargetKS 0
+homunculus_teleportAuto_totalDmg 0
+homunculus_teleportAuto_totalDmgInLock 0
+homunculus_teleportAuto_attackedWhenSitting 0
+
+# Turn on/off homunculus autofeeding
+homunculus_autoFeed 1
+# Feed homunculus when meet the hunger value (homunculus_hunger > homunculus_return)
+homunculus_hunger 15
+# Return homunculus when meet the hunger value
+homunculus_return 11
+# In Wich maps should we allow feeding? (leave empty for any map)
+homunculus_autoFeedAllowedMaps
+
+# Turn on/off pet autofeeding
+pet_autoFeed 1
+# Feed pet when meet the hunger value
+pet_hunger 25
+# Return pet when meet the hunger value
+pet_return 20
+
+######## Block options ########
+# You can copy & paste any block multiple times. So if you want to
+# configure two attack skills, just duplicate the attackSkillSlot block.
+
+useSelf_skill_smartHeal 1
+
+partySkillDistance 0..8
+
+
+autoSwitch_default_rightHand
+autoSwitch_default_leftHand
+autoSwitch_default_arrow
+
+attackSkillSlot AL_HOLYLIGHT {
+	# Holy Light
+	dist 9
+	sp >= 15
+	timeout 3
+	disabled 0
+}
+
+attackSkillSlot AL_HEAL {
+	# Heal bomb low
+	lvl 3
+	dist 9
+	sp >= 19
+	monsters Skeleton
+	timeout 1
+	disabled 1
+}
+
+attackSkillSlot AL_HEAL {
+	# Heal bomb mid
+	lvl 7
+	dist 9
+	sp >= 31
+	monsters Zombie
+	timeout 1
+	disabled 1
+}
+
+attackSkillSlot AL_HEAL {
+	# Heal bomb high
+	lvl 10
+	dist 9
+	sp >= 40
+	monsters Archer Skeleton, Soldier Skeleton
+	timeout 1
+	disabled 1
+}
+
+partySkill AL_HEAL {
+	# Heal party
+	sp > 13
+	target Monique
+	target_deltaHp <= -200
+	notPartyOnly 1
+	timeout 1
+	disabled 0
+}
+
+partySkill AL_HEAL {
+	# Heal party emergency
+	sp > 13
+	target Monique
+	target_hp < 40%
+	notPartyOnly 1
+	timeout 1
+	disabled 0
+}
+
+partySkill AL_BLESSING {
+	# Bless party
+	sp > 64
+	target Monique
+	target_whenStatusInactive EFST_BLESSING
+	target_timeout 240
+	notPartyOnly 1
+	timeout 1
+}
+
+partySkill AL_INCAGI {
+	# Agi party
+	sp > 45
+	target Monique
+	whenStatusActive Increase AGI
+	target_whenStatusInactive EFST_INC_AGI
+	target_timeout 240
+	notPartyOnly 1
+	timeout 2
+}
+
+useSelf_skill AL_HEAL {
+	# Heal self
+	sp > 13
+	hp < 60%
+	timeout 1
+}
+
+useSelf_skill AL_BLESSING {
+	# Bless self
+	sp > 64
+	whenStatusInactive EFST_BLESSING
+	timeout 1
+}
+
+useSelf_skill AL_INCAGI {
+	# Agi self
+	sp > 45
+	whenStatusInactive EFST_INC_AGI
+	timeout 2
+}
+
+useSelf_item Concentration Potion {
+	whenStatusInactive EFST_ATTHASTE_POTION1
+	inLockOnly 1
+	notWhileSitting 1
+	timeout 5
+}
+
+useSelf_item Meat {
+	hp < 70%
+	timeout 0.1
+}
+
+useSelf_item 528 {
+	# Monster's Feed
+	hp < 70%
+	timeout 0.1
+}
+
+useSelf_item Novice Potion {
+	hp < 80%
+	timeout 0.1
+}
+
+useSelf_item Red Potion {
+	hp < 20%
+	timeout 0.1
+}
+
+######## Autostorage/autosell ########
+
+sellAuto 1
+sellAuto_standpoint
+sellAuto_distance 3
+sellAuto_maxDistance
+sellAuto_npc_steps s e n
+
+storageAuto 1
+storageAuto_standpoint
+storageAuto_distance 3
+storageAuto_maxDistance
+storageAuto_npc_type 3
+storageAuto_type 0
+storageAuto_npc_steps c r~/Storage/ n
+storageAuto_password
+storageAuto_keepOpen 0
+storageAuto_useChatCommand
+storageAuto_useItem 0
+storageAuto_useItem_item
+storageAuto_notAfterDeath
+relogAfterStorage 0
+minStorageZeny 50
+
+sellAuto_npc geffen_in 77 167
+storageAuto_npc geffen 120 62
+
+buyAuto Red Potion {
+	maxAmount 30
+	minAmount 0
+	npc geffen_in 77 167
+	npc_steps b
+	distance 8
+	label BuyRedPot
+	disabled 1
+}
+
+buyAuto Concentration Potion {
+	maxAmount 4
+	minAmount 0
+	npc geffen_in 77 167
+	npc_steps b
+	distance 8
+	label BuyConcPot
+	disabled 1
+}
+
+buyAuto Butterfly Wing {
+	maxAmount 2
+	minAmount 0
+	npc geffen_in 77 167
+	npc_steps b
+	distance 8
+	label BuyButtWing
+	disabled 1
+}
+
+buyAuto Fly Wing {
+	maxAmount 10
+	minAmount 0
+	npc geffen_in 77 167
+	npc_steps b
+	distance 8
+	label BuyFlyWing
+	disabled 1
+}
+
+npcTimeResponse
+npcWrongStepsMethod 2
+
+getAuto Red Potion {
+	maxAmount 30
+	minAmount 0
+	batchSize
+	passive 1
+	disabled 1
+}
+
+getAuto Concentration Potion {
+	maxAmount 4
+	minAmount 0
+	batchSize
+	passive 1
+	disabled 1
+}
+
+getAuto Fly Wing {
+	maxAmount 10
+	minAmount 0
+	batchSize
+	passive 1
+	disabled 1
+}
+
+
+######## Debugging options; only useful for developers ########
+
+debug 0
+debugPacket_unparsed 0
+debugPacket_received 0
+debugPacket_ro_sent 0
+debugPacket_sent 0
+debugPacket_exclude
+debugPacket_include
+debugPacket_include_dumpMethod
+debugDomains
+logToFile_Debug
+logToFile_Errors
+logToFile_Messages
+logToFile_Warnings
+history_max 50
+
+
+macro_nowarn 0
+macro_orphans terminate
+macro_file macros.txt
+macro_allowDebug 0
