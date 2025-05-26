@@ -206,7 +206,7 @@ cartMaxWeight 7900
 itemsTakeGreed 0
 itemsCheckWeight 1
 
-lockMap in_sphinx2
+lockMap mjolnir_05
 
 # Ant Hell egg farm
 #lockMap_x 27
@@ -243,7 +243,7 @@ runFromTarget_noAttackMethodFallback 0
 runFromTarget_noAttackMethodFallback_attackMaxDist 14
 runFromTarget_noAttackMethodFallback_minStep 8
 
-saveMap morocc
+saveMap aldebaran
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -603,6 +603,12 @@ attackSkillSlot RG_RAID {
 	disabled 1
 }
 
+useSelf_skill TF_DETOXIFY {
+	sp > 10
+	timeout 5
+	whenStatusActive Poisoned
+}
+
 useSelf_item Awakening Potion {
 	whenStatusInactive EFST_ATTHASTE_POTION2
 	inLockOnly 1
@@ -622,6 +628,11 @@ useSelf_item 528 {
 }
 
 useSelf_item Red Potion {
+	hp < 50%
+	timeout 0.1
+}
+
+useSelf_item White Potion {
 	hp < 50%
 	timeout 0.1
 }
@@ -650,13 +661,13 @@ storageAuto_notAfterDeath
 relogAfterStorage 0
 minStorageZeny 200
 
-sellAuto_npc moc_ruins 91 128
-storageAuto_npc moc_ruins 59 157
+sellAuto_npc aldeba_in 94 56
+storageAuto_npc aldebaran 143 119
 
-buyAuto Red Potion {
-	maxAmount 10
+buyAuto White Potion {
+	maxAmount 25
 	minAmount 0
-	npc moc_ruins 91 128
+	npc aldeba_in 94 56
 	npc_steps b
 	distance 8
 	label BuyRedPot
@@ -667,7 +678,7 @@ buyAuto Awakening Potion {
 	maxAmount 2
 	minAmount 0
 	whenStatusInactive EFST_ATTHASTE_POTION2
-	npc moc_ruins 91 128
+	npc aldeba_in 94 56
 	npc_steps b
 	distance 8
 	label BuyConcPot
@@ -679,16 +690,16 @@ buyAuto Butterfly Wing {
 	minAmount 0
 	#npc prt_in 126 76
 	#npc payon 159 96
-	npc moc_ruins 91 128
+	npc aldeba_in 94 56
 	npc_steps b
 	distance 8
 	label BuyButtWing
 }
 
 buyAuto Fly Wing {
-	maxAmount 280
+	maxAmount 150
 	minAmount 0
-	npc moc_ruins 91 128
+	npc aldeba_in 94 56
 	npc_steps b
 	distance 8
 	label BuyFlyWing
@@ -697,8 +708,8 @@ buyAuto Fly Wing {
 npcTimeResponse 10
 npcWrongStepsMethod 3
 
-getAuto Red Potion {
-	maxAmount 10
+getAuto White Potion {
+	maxAmount 25
 	minAmount 0
 	batchSize
 	passive 1
@@ -714,7 +725,7 @@ getAuto Awakening Potion {
 }
 
 getAuto Fly Wing {
-	maxAmount 280
+	maxAmount 150
 	minAmount 0
 	batchSize
 	passive 1

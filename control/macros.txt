@@ -10,6 +10,18 @@ automacro DeadUnstuck {
 }
 
 
+######## Move from Ground Skill ########
+
+automacro MoveAway {
+	exclusive 1
+	console /uses Venom Dust/
+	call {
+		do north 5
+	}
+	timeout 1
+}
+
+
 ######## Sit Timeout ########
 
 automacro SitDetect {
@@ -35,7 +47,96 @@ automacro StandDetect {
 }
 
 
+######## Clear Stuck ########
+
+automacro ClearStuck {
+	exclusive 1
+	console /Stuck /
+	call { 
+		$follower = 0
+		$dir = @rand (1,4)
+		if (@config(follow) == 1) {
+			$follower = 1
+		}
+		do warp cancel
+		if ($dir == 1) do north
+		if ($dir == 2) do south 
+		if ($dir == 3) do east 
+		if ($dir == 4) do west
+		if ($follower == 1) {
+			do conf follow 1
+		}
+		$follower = undef
+	}
+	timeout 1
+}
+
+automacro NPCRelog {
+	exclusive 1
+	console /Failed to teleport using NPC/
+	call {
+		do relog
+	}
+}
+
+
+######## Teleport Mode Toggle ########
+
+automacro TeleOn {
+	disabled 1
+	run-once 1
+	inventory "Fly Wing" >= 20
+	call {
+		do conf route_randomWalk 0
+		do conf teleportAuto_idle 1
+		do conf route_teleport 1
+		release TeleOff
+	}
+	timeout 5
+	
+}
+
+automacro TeleOff {
+	disabled 1
+	run-once 1
+	inventory "Fly Wing" <= 5
+	aggressives == 0
+	call {
+		do conf route_randomWalk 1
+		do conf teleportAuto_idle 0
+		do conf route_teleport 0
+		release TeleOn
+	}
+	timeout 5
+}
+
+
 ######## Map Swap ########
+
+macro Aldebaran {
+	if (@config(saveMap) != aldebaran) {
+		$attackAuto = @config(attackAuto)
+		$randomWalk = @config(route_randomWalk)
+		do conf lockMap none
+		do conf attackAuto 1
+		do conf route_randomWalk 0
+		do move 143 119 aldebaran
+		do talknpc 143 119 c r0 n
+		do conf saveMap aldebaran
+		do conf attackAuto $attackAuto
+		do conf route_randomWalk $randomWalk
+		$attackAuto = undef
+		$randomWalk = undef
+	}
+	do conf storageAuto_npc aldebaran 143 119
+	do conf sellAuto_npc aldeba_in 94 56
+	do conf BuyRedPot.npc aldeba_in 94 56
+	do conf BuyButtWing.npc aldeba_in 94 56
+	do conf BuyFlyWing.npc aldeba_in 94 56
+	do conf BuyConcPot.npc aldeba_in 94 56
+	do conf lockMap mjolnir_05
+	stop
+}
 
 macro Comodo {
 	if (@config(saveMap) != comodo) {
@@ -185,70 +286,6 @@ macro Prontera {
 	do conf BuyConcPot.npc prt_in 126 76
 	do conf lockMap prt_sewb1
 	stop
-}
-
-
-######## Clear Stuck ########
-
-automacro ClearStuck {
-	exclusive 1
-	console /Stuck /
-	call { 
-		$follower = 0
-		$dir = @rand (1,4)
-		if (@config(follow) == 1) {
-			$follower = 1
-		}
-		do warp cancel
-		if ($dir == 1) do north
-		if ($dir == 2) do south 
-		if ($dir == 3) do east 
-		if ($dir == 4) do west
-		if ($follower == 1) {
-			do conf follow 1
-		}
-		$follower = undef
-	}
-	timeout 1
-}
-
-automacro NPCRelog {
-	exclusive 1
-	console /Failed to teleport using NPC/
-	call {
-		do relog
-	}
-}
-
-
-######## Teleport Mode Toggle ########
-
-automacro TeleOn {
-	disabled 1
-	run-once 1
-	inventory "Fly Wing" >= 20
-	call {
-		do conf route_randomWalk 0
-		do conf teleportAuto_idle 1
-		do conf route_teleport 1
-		release TeleOff
-	}
-	timeout 5
-	
-}
-
-automacro TeleOff {
-	disabled 1
-	run-once 1
-	inventory "Fly Wing" <= 5
-	aggressives == 0
-	call {
-		do conf route_randomWalk 1
-		do conf teleportAuto_idle 0
-		do conf route_teleport 0
-		release TeleOn
-	}
-	timeout 5
 }
 
 

@@ -58,14 +58,12 @@
 # <attack> = 1
 
 #### Hunting ####
-Matyr 2 0 0
+Argiope 2 0 0
 
 #### Don't bother ####
-Lunatic 0 0 0
-Megalodon 0 0 0
-Picky 0 0 0
-Skeleton 0 0 0
-Willow 0 0 0
+Argos 0 0 0
+Flora 0 0 0
+Mantis 0 0 0
 
 #### Avoid ####
 Giearth -1 0 0
