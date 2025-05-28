@@ -58,7 +58,7 @@
 # <attack> = 1
 
 #### Hunting ####
-Argiope 2 0 0
+Goblin 2 0 0
 
 #### Don't bother ####
 Argos 0 0 0
@@ -67,7 +67,6 @@ Mantis 0 0 0
 
 #### Avoid ####
 Giearth -1 0 0
-Kobold Archer -1 0 0
 Metaller -1 0 0
 Sandman -1 0 0
 Side Winder -1 0 0

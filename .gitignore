@@ -34,6 +34,9 @@ plugins/*
 
 !tables/
 tables/*
+!tables/iRO/
+tables/iRO/*
+!tables/iRO/portals.txt
 !tables/kRO/
 tables/kRO/*
 !tables/kRO/Ragexe_2021_11_03/

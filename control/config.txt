@@ -20,7 +20,7 @@ forceMapIP
 
 # 1 = hook into RO client, 2 = Act as stand-alone proxy, proxy = act as true proxy
 # https://openkore.com/wiki/XKore
-XKore 0
+XKore 3
 XKore_port 2350
 XKore_dll NetRedirect.dll
 XKore_injectDLL 1
@@ -206,7 +206,7 @@ cartMaxWeight 7900
 itemsTakeGreed 0
 itemsCheckWeight 1
 
-lockMap mjolnir_05
+lockMap gef_fild11
 
 # Ant Hell egg farm
 #lockMap_x 27
@@ -243,7 +243,7 @@ runFromTarget_noAttackMethodFallback 0
 runFromTarget_noAttackMethodFallback_attackMaxDist 14
 runFromTarget_noAttackMethodFallback_minStep 8
 
-saveMap aldebaran
+saveMap prontera
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -566,6 +566,7 @@ attackSkillSlot RG_INTIMIDATE {
 	lvl 1
 	inLockOnly 1
 	sp >= 13
+	#target_hp > 500
 	partyAggressives < 1
 	monstersCount < 2
 	monstersCountDist <= 17
@@ -589,10 +590,10 @@ monsterSkill TF_HIDING {
 	sp > 10
 	whenStatusInactive Hiding
 	timeout 1
-	partyAggressives >= 3
+	partyAggressives >= 4
 	dist <= 3
 	maxUses 1
-	disabled 1
+	disabled 0
 }
 
 attackSkillSlot RG_RAID {
@@ -600,7 +601,7 @@ attackSkillSlot RG_RAID {
 	sp > 20
 	whenStatusActive Hiding
 	timeout 1
-	disabled 1
+	disabled 0
 }
 
 useSelf_skill TF_DETOXIFY {
@@ -661,13 +662,13 @@ storageAuto_notAfterDeath
 relogAfterStorage 0
 minStorageZeny 200
 
-sellAuto_npc aldeba_in 94 56
-storageAuto_npc aldebaran 143 119
+sellAuto_npc prt_in 126 76
+storageAuto_npc prontera 29 207
 
 buyAuto White Potion {
 	maxAmount 25
 	minAmount 0
-	npc aldeba_in 94 56
+	npc prt_in 126 76
 	npc_steps b
 	distance 8
 	label BuyRedPot
@@ -678,7 +679,7 @@ buyAuto Awakening Potion {
 	maxAmount 2
 	minAmount 0
 	whenStatusInactive EFST_ATTHASTE_POTION2
-	npc aldeba_in 94 56
+	npc prt_in 126 76
 	npc_steps b
 	distance 8
 	label BuyConcPot
@@ -690,23 +691,23 @@ buyAuto Butterfly Wing {
 	minAmount 0
 	#npc prt_in 126 76
 	#npc payon 159 96
-	npc aldeba_in 94 56
+	npc prt_in 126 76
 	npc_steps b
 	distance 8
 	label BuyButtWing
 }
 
 buyAuto Fly Wing {
-	maxAmount 150
+	maxAmount 200
 	minAmount 0
-	npc aldeba_in 94 56
+	npc prt_in 126 76
 	npc_steps b
 	distance 8
 	label BuyFlyWing
 }
 
 npcTimeResponse 10
-npcWrongStepsMethod 3
+npcWrongStepsMethod 1
 
 getAuto White Potion {
 	maxAmount 25
@@ -725,7 +726,7 @@ getAuto Awakening Potion {
 }
 
 getAuto Fly Wing {
-	maxAmount 150
+	maxAmount 200
 	minAmount 0
 	batchSize
 	passive 1

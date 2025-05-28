@@ -45,7 +45,7 @@ all 0 1 0
 # Adjust these to your needs
 
 602 2 1 0 # Butterfly Wing
-601 150 1 0 # Fly Wing
+601 200 1 0 # Fly Wing
 
 645 0 1 0 # Concentration Potion
 656 2 1 0 # Awakening Potion
@@ -98,7 +98,11 @@ all 0 1 0
 ##### ARROWS #####
 # You may want to modify these if you're an archer/hunter
 
-Arrow 3000 1 0
+Arrow 0 0 1
+Arrow of Wind 0 0 1
+Oridecon Arrow 0 0 1
+Stone Arrow 0 0 1
+Poison Arrow 0 0 1
 
 
 
@@ -140,6 +144,7 @@ Helm 0 0 1 # 2228
 High Heels 0 0 1 # 2409
 Hood 0 0 1 # 2501
 "Hood [1]" 0 0 1 # 2502
+Indian Fillet 0 0 1 # 5010
 Jacket 0 0 1 # 2303
 "Jacket [1]" 0 0 1 # 2304
 Manteau 0 0 1 # 2505
@@ -151,6 +156,8 @@ Mr. Smile 0 0 1 # 2278
 Muffler 0 0 1 # 2503
 Padded Armor 0 0 1 # 2313
 Pantie 0 0 1 # 2371
+Puppy Headband 0 0 1 # 5118
+Red Bandana 0 0 1 # 2275
 Ribbon 0 0 1 # 2208
 "Ribbon [1]" 0 0 1 # 2209
 Rosary 0 0 1 # 2840
@@ -171,6 +178,7 @@ Tights 0 0 1 # 2330
 Turban 0 0 1 # 2223
 Wooden Mail 0 0 1 # 2328
 "Wooden Mail [1]" 0 0 1 # 2329
+Zorro Masque 0 0 1 2263
 
 
 ##### WORTHLESS WEAPONS #####
@@ -209,8 +217,10 @@ Club 0 0 1 # 1503
 "Club [4]" 0 0 1 # 1502
 Composite Bow 0 0 1 # 1706
 "Composite Bow [3]" 0 0 1 # 1704
+"Composite Bow [4]" 0 0 1 # 1705
 Cross Bow 0 0 1 # 1712
 "Cross Bow [2]" 0 0 1
+"Cross Bow [3]" 0 0 1
 Cutter 0 0 1 # 1206
 "Cutter [3]" 0 0 1 # 1204
 "Cutter [4]" 0 0 1 # 1205
